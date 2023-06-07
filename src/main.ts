@@ -1,9 +1,10 @@
-// const imgs = document.querySelector("work-img");
-// const fullPage = document.querySelector("full-page");
+document.querySelectorAll(".work-container img").forEach((image) => {
+  image.onclick = () => {
+    document.querySelector(".pop-up").style.display = "block";
+    document.querySelector(".pop-up img").src = image.src;
+  };
+});
 
-// imgs.forEach((img) => {
-//   img.addEventListener("click", function () {
-//     fullPage.getElementsByClassName.backgroundImage = "url(" + img.src + ")";
-//     fullPage.style.display = "block";
-//   });
-// });
+document.querySelector(".pop-up span").onclick = () => {
+  document.querySelector(".pop-up").style.display = "none";
+};
